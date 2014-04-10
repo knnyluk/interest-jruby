@@ -2,6 +2,9 @@
 
 {<img src="https://travis-ci.org/camjohnson0302/Team_Ken.svg?branch=gem_fix" alt="Build Status" />}[https://travis-ci.org/camjohnson0302/Team_Ken]
 
+{<img src="https://coveralls.io/repos/camjohnson0302/Team_Ken/badge.png" alt="Coverage Status" />}[https://coveralls.io/r/camjohnson0302/Team_Ken]
+
+
 
 
 
