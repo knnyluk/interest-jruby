@@ -32,6 +32,10 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+# Additional Gems
+gem 'pry'
+gem 'neoid', '~> 0.1.1'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
