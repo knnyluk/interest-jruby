@@ -40,7 +40,7 @@ gem 'neography'
 gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
@@ -48,6 +48,10 @@ group :development, :test do
   gem 'shoulda'
   gem 'faker'
   gem 'coveralls', require: false
+end
+
+group :production do
+	gem 'rails_12factor'
 end
 
 # Use Capistrano for deployment
