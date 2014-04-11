@@ -19,6 +19,11 @@ GEM
       activesupport (= 4.0.4)
       arel (~> 4.0.0)
     activerecord-deprecated_finders (1.0.3)
+    activerecord-jdbc-adapter (1.3.6)
+      activerecord (>= 2.2)
+    activerecord-jdbcpostgresql-adapter (1.3.6)
+      activerecord-jdbc-adapter (~> 1.3.6)
+      jdbc-postgres (>= 9.1)
     activesupport (4.0.4)
       i18n (~> 0.6, >= 0.6.9)
       minitest (~> 4.2)
@@ -28,6 +33,7 @@ GEM
     addressable (2.3.6)
     arel (4.0.2)
     bcrypt (3.1.7)
+    bcrypt (3.1.7-java)
     builder (3.1.4)
     capybara (2.2.1)
       mime-types (>= 1.16)
@@ -55,19 +61,24 @@ GEM
     execjs (2.0.2)
     faker (1.3.0)
       i18n (~> 0.5)
+    ffi (1.9.3-java)
     hike (1.2.3)
     httpclient (2.3.4.1)
     i18n (0.6.9)
     jbuilder (1.5.3)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
+    jdbc-postgres (9.3.1101)
     jquery-rails (3.1.0)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.1)
-    kgio (2.9.2)
+    json (1.8.1-java)
     launchy (2.4.2)
       addressable (~> 2.3)
+    launchy (2.4.2-java)
+      addressable (~> 2.3)
+      spoon (~> 0.0.1)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -85,13 +96,19 @@ GEM
       rubyzip (>= 1.0.0)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
+    nokogiri (1.6.1-java)
+      mini_portile (~> 0.5.0)
     os (0.9.6)
-    pg (0.17.1)
     polyglot (0.3.4)
     pry (0.9.12.6)
       coderay (~> 1.0)
       method_source (~> 0.8)
       slop (~> 3.4)
+    pry (0.9.12.6-java)
+      coderay (~> 1.0)
+      method_source (~> 0.8)
+      slop (~> 3.4)
+      spoon (~> 0.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -113,7 +130,6 @@ GEM
       activesupport (= 4.0.4)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    raindrops (0.13.0)
     rake (10.2.2)
     rdoc (4.1.1)
       json (~> 1.4)
@@ -153,6 +169,8 @@ GEM
       simplecov-html (~> 0.8.0)
     simplecov-html (0.8.0)
     slop (3.5.0)
+    spoon (0.0.4)
+      ffi
     sprockets (2.11.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -166,6 +184,7 @@ GEM
       tins (~> 1.0)
     thor (0.19.1)
     thread_safe (0.3.3)
+    thread_safe (0.3.3-java)
     tilt (1.4.1)
     tins (1.1.0)
     treetop (1.4.15)
@@ -177,17 +196,15 @@ GEM
     uglifier (2.5.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    unicorn (4.8.2)
-      kgio (~> 2.6)
-      rack
-      raindrops (~> 0.7)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
 PLATFORMS
+  java
   ruby
 
 DEPENDENCIES
+  activerecord-jdbcpostgresql-adapter
   bcrypt (~> 3.1.7)
   capybara
   coffee-rails (~> 4.0.0)
@@ -197,7 +214,6 @@ DEPENDENCIES
   jquery-rails
   launchy
   neography
-  pg
   pry
   rails (= 4.0.4)
   rails_12factor
@@ -207,4 +223,3 @@ DEPENDENCIES
   shoulda
   turbolinks
   uglifier (>= 1.3.0)
-  unicorn

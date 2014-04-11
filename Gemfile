@@ -4,7 +4,8 @@ ruby '2.0.0'
 gem 'rails', '4.0.4'
 
 # Use postgresql as the database for Active Record
-gem 'pg'
+#gem 'pg'
+gem 'activerecord-jdbcpostgresql-adapter'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
@@ -40,7 +41,7 @@ gem 'neography'
 gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
-gem 'unicorn'
+#gem 'unicorn'
 group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
