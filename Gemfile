@@ -36,6 +36,7 @@ end
 # Additional Gems
 gem 'pry'
 gem 'neography'
+gem 'neo4j', '~> 3.0.0.alpha.3'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
